@@ -1,0 +1,153 @@
+# CONTENT FOR YOUR WIX WEBSITE
+# Copy and paste each section into Wix's editor
+
+========================================
+HOMEPAGE - HERO SECTION
+========================================
+
+**Main Heading:**
+iOS Developer
+
+**Subheading:**
+Building useful apps that make life easier
+
+**Buttons:**
+- "View My Apps" (link to #apps section)
+- "GitHub" (link to https://github.com/jbaker00/)
+- "LinkedIn" (link to https://www.linkedin.com/in/jbaker00/)
+
+
+========================================
+MY APPS SECTION
+========================================
+
+**Section Title:**
+My Apps
+
+---
+
+**APP 1: Creole Translator**
+
+Icon: 🎤 (or upload a mic icon)
+
+Title: Creole Translator
+
+Description: Instant voice translation from Haitian Creole to English powered by AI. Speak naturally and get accurate translations in seconds.
+
+Tags: Voice Recognition | AI-Powered | Instant
+
+Button: "Coming Soon" or "Download on App Store" (when published)
+
+---
+
+**APP 2: ResortBrowser**
+
+Icon: 🏔️ (or upload a mountain/ski icon)
+
+Title: ResortBrowser
+
+Description: Discover and explore ski resorts with detailed information, real-time conditions, and interactive maps. Your ultimate ski resort companion.
+
+Tags: Real-time Data | Interactive Maps | Weather Updates
+
+Button: "Download on App Store"
+Link: https://apps.apple.com/us/app/resortbrowser/id6443440601
+
+---
+
+**APP 3: Suburban NJ - NYC Scheduler**
+
+Icon: 🚂 (or upload a train icon)
+
+Title: Suburban NJ - NYC Scheduler
+
+Description: Never miss your train again. Real-time NJ Transit schedules, alerts, and trip planning for commuters between New Jersey and New York City.
+
+Tags: Live Schedules | Alerts | Trip Planning
+
+Button: "Download on App Store"
+Link: https://apps.apple.com/us/app/suburban-nj-nyc-scheduler/id1349552442
+
+
+========================================
+ABOUT PAGE
+========================================
+
+**Page Title:**
+About Me
+
+**Section 1 - Introduction:**
+
+Hi, I'm James Baker, an iOS developer passionate about creating apps that solve real problems and make daily life easier.
+
+I specialize in building native iOS applications with Swift and SwiftUI, focusing on intuitive user experiences and robust functionality. My apps range from language translation tools to travel companions and commuter utilities.
+
+Each app I build combines practical utility with clean design, leveraging the latest iOS technologies and APIs. I'm particularly interested in AI integration, real-time data, and location-based services.
+
+**Section 2 - What I Do:**
+
+Title: What I Do
+
+Bullet Points:
+• iOS Development: Native Swift/SwiftUI applications
+• AI Integration: Speech recognition, natural language processing
+• Real-time Data: Transit schedules, weather, and live updates
+• User Experience: Clean, intuitive interfaces that just work
+
+**Section 3 - Let's Connect:**
+
+Title: Let's Connect
+
+Text: I'm always interested in new projects and collaborations. Feel free to reach out!
+
+Links:
+- LinkedIn: https://www.linkedin.com/in/jbaker00/
+- GitHub: https://github.com/jbaker00/
+
+
+========================================
+FOOTER (All Pages)
+========================================
+
+Copyright: © 2026 James Baker. All rights reserved.
+
+Links:
+- GitHub (https://github.com/jbaker00/)
+- LinkedIn (https://www.linkedin.com/in/jbaker00/)
+
+
+========================================
+DESIGN RECOMMENDATIONS FOR WIX
+========================================
+
+**Color Scheme:**
+- Primary Color: Blue (#007AFF - iOS blue)
+- Secondary Color: Purple (#5856D6)
+- Background: Light gray or white
+- Text: Dark gray/black
+
+**Layout Tips:**
+1. Use Wix's "Blank Template" for maximum control
+2. Add a sticky header with navigation
+3. Use 3-column grid for the apps section
+4. Add smooth scroll animations between sections
+5. Make it mobile-responsive (Wix does this automatically)
+
+**Images to Add:**
+- App screenshots for each app (from App Store)
+- App Store download badges (get from Apple's website)
+- Optional: Your professional headshot in About section
+
+
+========================================
+HOW TO ADD IN WIX
+========================================
+
+1. **Create pages:** Home, About
+2. **Add sections:** Drag "Strip" elements for each section
+3. **Add text:** Use "Text" elements, copy/paste content above
+4. **Add buttons:** Use "Button" elements, link to App Store URLs
+5. **Add icons:** Use "Icon" elements or emoji in text
+6. **Style it:** Click elements to change colors, fonts, spacing
+
+That's it! Should take 10-15 minutes to set up.
