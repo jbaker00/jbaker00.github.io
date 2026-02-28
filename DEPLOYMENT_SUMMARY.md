@@ -57,9 +57,17 @@ git push origin main
 
 ## 📱 Apps Featured
 
-1. **Creole Translator** - Coming soon
-2. **ResortBrowser** - https://apps.apple.com/us/app/resortbrowser/id6443440601
-3. **Suburban NJ - NYC Scheduler** - https://apps.apple.com/us/app/suburban-nj-nyc-scheduler/id1349552442
+1. **FirebaseViewer** - https://github.com/jbaker00/FirebaseViewer
+2. **RokuTeleMix** - https://github.com/jbaker00/RokuTeleMix
+3. **ResortEditor** - https://github.com/jbaker00/ResortEditor
+4. **JamaicaDeals** - https://github.com/jbaker00/JamaicaDeals
+5. **MauiTrolly** - https://apps.apple.com/app/id6759178167
+6. **LyghtsOutApp** - Coming Soon
+7. **GoogleAdMobMonitor** - Coming Soon
+8. **Creole Translator** - https://apps.apple.com/us/app/creoletranslator/id6758288798
+9. **ResortBrowser** - https://apps.apple.com/us/app/resortbrowser/id6443440601
+10. **Suburban NJ - NYC Scheduler** - https://apps.apple.com/us/app/suburban-nj-nyc-scheduler/id1349552442
+11. **OCI Vision** - https://github.com/jbaker00/OCI-Vision
 
 ---
 
