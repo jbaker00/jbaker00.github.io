@@ -203,6 +203,10 @@ body {
     font-weight: 500;
 }
 
+.app-card .btn + .btn {
+    margin-top: 0.75rem;
+}
+
 /* About Section */
 .about-section {
     padding: 80px 20px;
