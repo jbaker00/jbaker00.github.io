@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Munchmark — Save restaurants from Instagram, TikTok and the web. Auto-fills Yelp ratings, addresses and details. Build shared lists with friends.">
+    <title>Munchmark — Save &amp; Organize Restaurants</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero */
+        .mm-hero {
+            background: linear-gradient(135deg, #E8590C 0%, #B34300 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .mm-hero .mm-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .mm-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        .mm-hero .tagline {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .mm-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 32px;
+        }
+        .btn-appstore {
+            display: inline-block;
+            background: white;
+            color: #B34300;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: opacity 0.2s;
+        }
+        .btn-appstore:hover { opacity: 0.9; }
+
+        /* How it works */
+        .mm-how {
+            background: #f2f2f7;
+            padding: 64px 24px;
+            text-align: center;
+        }
+        .mm-how h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 48px;
+        }
+        .mm-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .mm-step {
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+        }
+        .mm-step .step-num {
+            width: 48px;
+            height: 48px;
+            background: #E8590C;
+            color: white;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .mm-step h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 8px;
+        }
+        .mm-step p {
+            font-size: 0.9rem;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Features */
+        .mm-features {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+        .mm-features h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .mm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+        .mm-feature {
+            text-align: center;
+        }
+        .mm-feature .icon {
+            font-size: 2.5rem;
+            margin-bottom: 14px;
+        }
+        .mm-feature h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 8px;
+        }
+        .mm-feature p {
+            font-size: 0.95rem;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Pills strip */
+        .mm-strip {
+            background: #fff3ec;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .mm-strip h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #B34300;
+            margin-bottom: 24px;
+        }
+        .mm-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        .mm-pill {
+            background: white;
+            border: 1px solid #f0c4a8;
+            border-radius: 20px;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            color: #1c1c1e;
+            font-weight: 500;
+        }
+
+        /* Footer links */
+        .mm-footer-links {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid #e5e5ea;
+            font-size: 0.9rem;
+            color: #6e6e73;
+        }
+        .mm-footer-links a {
+            color: #B34300;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        .mm-footer-links a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center;
+            padding: 20px 24px;
+            color: #6e6e73;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mm-hero">
+        <span class="mm-icon">🍽️</span>
+        <div class="mm-badge">Free iOS App</div>
+        <h1>Munchmark</h1>
+        <p class="tagline">Never lose track of a great restaurant again. Save from Instagram, TikTok, and anywhere — details filled in automatically.</p>
+        <br>
+        <a href="https://apps.apple.com/app/munchmark/id6773109835" class="btn-appstore">Download on the App Store</a>
+    </div>
+
+    <div class="mm-how">
+        <h2>How it works</h2>
+        <div class="mm-steps">
+            <div class="mm-step">
+                <div class="step-num">1</div>
+                <h3>Discover</h3>
+                <p>See a restaurant you want to try on Instagram, TikTok, Yelp, or anywhere online.</p>
+            </div>
+            <div class="mm-step">
+                <div class="step-num">2</div>
+                <h3>Share</h3>
+                <p>Tap <strong>Share → Munchmark</strong> from any app. That's it.</p>
+            </div>
+            <div class="mm-step">
+                <div class="step-num">3</div>
+                <h3>Auto-fill</h3>
+                <p>AI identifies the restaurant. Yelp rating, address, price range &amp; more appear instantly.</p>
+            </div>
+            <div class="mm-step">
+                <div class="step-num">4</div>
+                <h3>Organize</h3>
+                <p>Browse by city, build lists, mark favorites, and share with friends.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mm-features">
+        <h2>Everything you need</h2>
+        <div class="mm-grid">
+            <div class="mm-feature">
+                <div class="icon">📲</div>
+                <h3>Save from Anywhere</h3>
+                <p>Instagram, TikTok, Facebook, Yelp, Google Maps, restaurant websites — any URL, any app.</p>
+            </div>
+            <div class="mm-feature">
+                <div class="icon">⭐</div>
+                <h3>Auto-Filled Details</h3>
+                <p>Yelp rating, address, price range, phone, and website pulled in automatically. No searching required.</p>
+            </div>
+            <div class="mm-feature">
+                <div class="icon">🗂️</div>
+                <h3>Smart Lists</h3>
+                <p>Create custom lists like "Date Night" or "Nashville Trip" and keep your saves organized.</p>
+            </div>
+            <div class="mm-feature">
+                <div class="icon">👥</div>
+                <h3>Share with Friends</h3>
+                <p>Share lists via iCloud. Collaborators see additions in real time — perfect for planning trips together.</p>
+            </div>
+            <div class="mm-feature">
+                <div class="icon">❤️</div>
+                <h3>Favorites</h3>
+                <p>Heart any spot for instant access. Your favorites are always one tap away.</p>
+            </div>
+            <div class="mm-feature">
+                <div class="icon">☁️</div>
+                <h3>iCloud Sync</h3>
+                <p>Your restaurant list lives in iCloud and syncs seamlessly across all your Apple devices.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mm-strip">
+        <h2>Free, with no strings attached</h2>
+        <div class="mm-pills">
+            <span class="mm-pill">Free to download</span>
+            <span class="mm-pill">No account required</span>
+            <span class="mm-pill">iCloud storage</span>
+            <span class="mm-pill">Your data stays yours</span>
+            <span class="mm-pill">Works with any iOS Share Sheet</span>
+            <span class="mm-pill">Syncs across Apple devices</span>
+        </div>
+    </div>
+
+    <div class="mm-footer-links">
+        <a href="munchmark-support.html">Support</a>
+        <a href="munchmark-privacy.html">Privacy Policy</a>
+        <a href="munchmark-terms.html">Terms of Use</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 James Baker. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
