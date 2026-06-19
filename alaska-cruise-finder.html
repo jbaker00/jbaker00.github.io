@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alaska Cruise Finder – Seattle. Find your perfect Alaska cruise from Seattle. Compare ships, itineraries, cabins, and dining for the 2026 season.">
+    <title>Alaska Cruise Finder – Seattle</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero */
+        .acf-hero {
+            background: linear-gradient(135deg, #0D2239 0%, #1a3a5c 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .acf-hero .acf-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .acf-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        .acf-hero .tagline {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .acf-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 32px;
+        }
+        .btn-appstore {
+            display: inline-block;
+            background: white;
+            color: #0D2239;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: opacity 0.2s;
+        }
+        .btn-appstore:hover { opacity: 0.9; }
+
+        /* How it works */
+        .acf-how {
+            background: #f2f2f7;
+            padding: 64px 24px;
+            text-align: center;
+        }
+        .acf-how h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 48px;
+        }
+        .acf-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .acf-step {
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+        }
+        .acf-step .step-num {
+            width: 48px;
+            height: 48px;
+            background: #0D2239;
+            color: white;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .acf-step h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 8px;
+        }
+        .acf-step p {
+            font-size: 0.9rem;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Features */
+        .acf-features {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+        .acf-features h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .acf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+        }
+        .acf-feature {
+            text-align: center;
+        }
+        .acf-feature .icon {
+            font-size: 2.5rem;
+            margin-bottom: 14px;
+        }
+        .acf-feature h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 8px;
+        }
+        .acf-feature p {
+            font-size: 0.95rem;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Pills strip */
+        .acf-strip {
+            background: #e8f0f8;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .acf-strip h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0D2239;
+            margin-bottom: 24px;
+        }
+        .acf-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        .acf-pill {
+            background: white;
+            border: 1px solid #b8cce0;
+            border-radius: 20px;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            color: #1c1c1e;
+            font-weight: 500;
+        }
+
+        /* Footer links */
+        .acf-footer-links {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid #e5e5ea;
+            font-size: 0.9rem;
+            color: #6e6e73;
+        }
+        .acf-footer-links a {
+            color: #0D2239;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        .acf-footer-links a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center;
+            padding: 20px 24px;
+            color: #6e6e73;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="acf-hero">
+        <span class="acf-icon">🚢</span>
+        <div class="acf-badge">Free iOS App</div>
+        <h1>Alaska Cruise Finder – Seattle</h1>
+        <p class="tagline">Find your perfect Alaska cruise from Seattle. Compare ships, itineraries, cabins, and dining across the entire 2026 season — all in one place.</p>
+        <br>
+        <a href="https://apps.apple.com/us/app/alaska-cruise-finder-seattle/id6772582999" class="btn-appstore">Download on the App Store</a>
+    </div>
+
+    <div class="acf-how">
+        <h2>How it works</h2>
+        <div class="acf-steps">
+            <div class="acf-step">
+                <div class="step-num">1</div>
+                <h3>Browse</h3>
+                <p>Explore 300+ Alaska cruises sailing from Seattle in 2026 — filtered by month, length, line, or price.</p>
+            </div>
+            <div class="acf-step">
+                <div class="step-num">2</div>
+                <h3>Match</h3>
+                <p>Take a quick 7-question quiz and get cruise recommendations tailored to your travel style.</p>
+            </div>
+            <div class="acf-step">
+                <div class="step-num">3</div>
+                <h3>Compare</h3>
+                <p>Add cruises to compare and see ships, itineraries, cabins, and dining side by side.</p>
+            </div>
+            <div class="acf-step">
+                <div class="step-num">4</div>
+                <h3>Book</h3>
+                <p>Submit a no-pressure inquiry or schedule a call with a real Alaska travel advisor.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="acf-features">
+        <h2>Everything you need to pick the right cruise</h2>
+        <div class="acf-grid">
+            <div class="acf-feature">
+                <div class="icon">🗓️</div>
+                <h3>2026 Season at a Glance</h3>
+                <p>Every Alaska cruise sailing from the Port of Seattle next season — 19 ships, hundreds of departures, real dates.</p>
+            </div>
+            <div class="acf-feature">
+                <div class="icon">🧭</div>
+                <h3>Matchmaker Quiz</h3>
+                <p>Tell us your priorities — budget, vibe, party size, must-see ports — and get personalized cruise picks.</p>
+            </div>
+            <div class="acf-feature">
+                <div class="icon">⚖️</div>
+                <h3>Side-by-Side Compare</h3>
+                <p>Stack cruises against each other to see exactly how ships, itineraries, and prices differ.</p>
+            </div>
+            <div class="acf-feature">
+                <div class="icon">🛏️</div>
+                <h3>Cabin &amp; Dining Detail</h3>
+                <p>Drill into cabin categories, dining venues, ship amenities, and full port-by-port itineraries.</p>
+            </div>
+            <div class="acf-feature">
+                <div class="icon">👋</div>
+                <h3>Talk to a Real Advisor</h3>
+                <p>Meet Chantale Baker, a certified Alaska travel specialist. Inquire about a cruise or book a free consult.</p>
+            </div>
+            <div class="acf-feature">
+                <div class="icon">📡</div>
+                <h3>Works Offline</h3>
+                <p>Cruise data is cached on-device, so you can browse, filter, and compare without a connection.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="acf-strip">
+        <h2>Free, with no strings attached</h2>
+        <div class="acf-pills">
+            <span class="acf-pill">Free to download</span>
+            <span class="acf-pill">No account required</span>
+            <span class="acf-pill">No subscriptions</span>
+            <span class="acf-pill">Works offline</span>
+            <span class="acf-pill">No-pressure advisor</span>
+        </div>
+    </div>
+
+    <div class="acf-footer-links">
+        <a href="alaska-cruise-finder-support.html">Support</a>
+        <a href="alaska-cruise-finder-privacy.html">Privacy Policy</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 James Baker. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
