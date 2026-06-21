@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Country Road Tower Defense — Free iOS tower defense game set in the Wilkerson Family Compound.">
+    <title>Country Road Tower Defense — iOS Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero */
+        .crtd-hero {
+            background: linear-gradient(135deg, #2D6A2A 0%, #1A4018 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .crtd-hero .crtd-icon {
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: 24px;
+            display: block;
+        }
+        .crtd-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        .crtd-hero .tagline {
+            font-size: 1.25rem;
+            opacity: 0.85;
+            margin-bottom: 32px;
+        }
+        .crtd-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 32px;
+        }
+        .btn-appstore {
+            display: inline-block;
+            background: #C8A200;
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-appstore:hover { background: #a88900; }
+
+        /* Features */
+        .crtd-features {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+        .crtd-features h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2D6A2A;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .crtd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+        .crtd-feature {
+            text-align: center;
+        }
+        .crtd-feature .icon {
+            font-size: 2.5rem;
+            margin-bottom: 14px;
+        }
+        .crtd-feature h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 8px;
+        }
+        .crtd-feature p {
+            font-size: 0.95rem;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* How to Play strip */
+        .crtd-howto {
+            background: #f2f2f7;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .crtd-howto h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1A4018;
+            margin-bottom: 24px;
+        }
+        .crtd-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .crtd-step {
+            background: white;
+            border: 1px solid #e5e5ea;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            color: #1c1c1e;
+            font-weight: 500;
+        }
+
+        /* Footer links */
+        .crtd-footer-links {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid #e5e5ea;
+            font-size: 0.9rem;
+            color: #6e6e73;
+        }
+        .crtd-footer-links a {
+            color: #2D6A2A;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        .crtd-footer-links a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center;
+            padding: 20px 24px;
+            color: #6e6e73;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="crtd-hero">
+        <span class="crtd-icon">🏚️</span>
+        <div class="crtd-badge">Free on the App Store</div>
+        <h1>Country Road Tower Defense</h1>
+        <p class="tagline">Defend the Wilkerson Compound!</p>
+        <br>
+        <a href="https://apps.apple.com/app/country-road-tower-defense/id0000000000" class="btn-appstore">Download on the App Store</a>
+    </div>
+
+    <div class="crtd-features">
+        <h2>Protect the Big House</h2>
+        <div class="crtd-grid">
+            <div class="crtd-feature">
+                <div class="icon">🛣️</div>
+                <h3>Two Enemy Routes</h3>
+                <p>Enemies charge in from two directions — up the left side and sweeping across the bottom. You must defend both roads at once.</p>
+            </div>
+            <div class="crtd-feature">
+                <div class="icon">🎆</div>
+                <h3>Aunt Emma's Fireworks</h3>
+                <p>Fast-firing fireworks tower that showers Go-Kart Bandits with rapid explosions. Affordable at $50 and great for slowing down swarms.</p>
+            </div>
+            <div class="crtd-feature">
+                <div class="icon">🥤</div>
+                <h3>Aunt Junita's Coke Cannon</h3>
+                <p>A heavy-hitting soda cannon that launches pressurized Coke bottles at armored Garbage Trucks. Slower rate of fire, massive damage.</p>
+            </div>
+            <div class="crtd-feature">
+                <div class="icon">🏎️</div>
+                <h3>Go-Kart Bandits</h3>
+                <p>Fast-moving, lightly armored raiders who zip down the country roads. Quick reflexes — and fast towers — are key to stopping them.</p>
+            </div>
+            <div class="crtd-feature">
+                <div class="icon">🚛</div>
+                <h3>Garbage Trucks</h3>
+                <p>Slow but armored behemoths that absorb huge amounts of damage before going down. Save your Coke Cannons for these bruisers.</p>
+            </div>
+            <div class="crtd-feature">
+                <div class="icon">🌊</div>
+                <h3>Wave-Based Gameplay</h3>
+                <p>Survive endless waves of increasingly difficult enemies. Tap the Start Wave button when you're ready and brace for impact.</p>
+            </div>
+            <div class="crtd-feature">
+                <div class="icon">🪙</div>
+                <h3>Coin Economy</h3>
+                <p>Earn coins for every enemy you defeat. Go-Kart Bandits drop 10 coins; Garbage Trucks drop 20. Spend wisely to build your defenses.</p>
+            </div>
+            <div class="crtd-feature">
+                <div class="icon">📱</div>
+                <h3>iPhone &amp; iPad</h3>
+                <p>Built with SpriteKit and optimized for both iPhone and iPad. Play in landscape for the best compound-wide view.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="crtd-howto">
+        <h2>How to Play</h2>
+        <div class="crtd-steps">
+            <span class="crtd-step">Tap a white circle to build a tower at a cousin's house</span>
+            <span class="crtd-step">Choose Aunt Emma's Fireworks ($50) or Aunt Junita's Coke Cannon ($100)</span>
+            <span class="crtd-step">Earn coins by defeating enemies in each wave</span>
+            <span class="crtd-step">Cover both roads before tapping Start Wave</span>
+            <span class="crtd-step">Don't let enemies reach the Big House!</span>
+        </div>
+    </div>
+
+    <div class="crtd-footer-links">
+        <a href="https://apps.apple.com/app/country-road-tower-defense/id0000000000">App Store</a>
+        <a href="country-road-tower-defence-privacy.html">Privacy Policy</a>
+        <a href="country-road-tower-defence-support.html">Support</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 James Baker. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
