@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyHealthRelay — Support">
+    <title>MyHealthRelay — Support</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-hero {
+            background: linear-gradient(135deg, #0A5CFF 0%, #062f86 100%);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .privacy-hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .privacy-hero p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+        }
+        .privacy-content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+        .privacy-content h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0A5CFF;
+            margin-top: 36px;
+            margin-bottom: 10px;
+        }
+        .faq-item h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1c1c1e;
+            margin-top: 24px;
+            margin-bottom: 6px;
+        }
+        .privacy-content p, .privacy-content li {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: #1c1c1e;
+        }
+        .privacy-content ul {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+        .highlight-box {
+            background: #e8eef5;
+            border-left: 4px solid #0A5CFF;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .contact-section {
+            background: #f2f2f7;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #6e6e73;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="privacy-hero">
+        <h1>Support</h1>
+        <p>MyHealthRelay — From you to your care team</p>
+    </div>
+
+    <div class="privacy-content">
+
+        <div class="highlight-box">
+            <p>Need help with MyHealthRelay? Browse the common questions below or reach out directly — we typically respond within 1–2 business days.</p>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>How do I generate a report for my doctor?</h3>
+            <p>On the dashboard, pick a time period (1W, 1M, 3M, 1Y, All, or a custom range) using the segmented bar at the top. Tap <strong>Preview</strong> to see the PDF, or <strong>Generate</strong> to open the iOS share sheet — from there you can AirDrop, message, email, or save to Files.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why is my dashboard mostly empty?</h3>
+            <p>MyHealthRelay reads data from Apple Health. If you've never granted permission, or if you don't have devices feeding Apple Health (Apple Watch, a Wi-Fi scale, a connected blood-pressure cuff, etc.), most tiles will show "—". Open iOS Settings → Health → Data Access &amp; Devices → MyHealthRelay and confirm the categories you want are toggled on.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I import my Fitbit / Google Health data?</h3>
+            <p>Tap the gear icon in the top-left of the dashboard, then "How do I get my Google data?" for step-by-step instructions on requesting your data from Google Takeout. Once you have the ZIP, tap "Import Google Takeout (.zip)" and pick the file. The app will unzip it, find your weight, body fat, step, and sleep data, and write it into Apple Health.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why are some metrics blank when I switch to 1 Year or All?</h3>
+            <p>For long periods we load a fast summary (weight, body fat, blood pressure) rather than scan every day. Average steps, sleep, resting heart rate, and HRV are computed from single-query aggregates and should populate. If they don't, you likely don't have data of that type in Apple Health for that range.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I customize which tiles show on the dashboard?</h3>
+            <p>Tap the sliders icon in the top-right of the dashboard. Drag the handles to reorder tiles, or tap the circle to hide a tile. Your layout is saved across launches. Tap "Reset" to restore the original order.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Why does the app ask about tracking?</h3>
+            <p>That's Apple's standard App Tracking Transparency prompt, required because the app shows a banner ad. Granting lets the ad SDK serve more relevant ads. Denying limits the ads to generic (non-personalized) ones. Either way, the app works identically and your Apple Health data is never shared with the ad SDK.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>The 1-week PDF report has empty rows. Why?</h3>
+            <p>For short reports we show one row per day even if some metrics are missing — this is intentional so you can see the gaps. For longer reports (3 months and up) we drop rows with no data so the table stays readable.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is the app free? Are there in-app purchases?</h3>
+            <p>The app is free, supported by a small Google AdMob banner at the bottom of the dashboard. A Pro upgrade with extra report templates and chart styles is in development — when it ships, the current functionality will remain free.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Which iPhone models are supported?</h3>
+            <p>MyHealthRelay requires iOS 17.0 or later. It runs on any iPhone capable of installing iOS 17 (iPhone XS / XR and later).</p>
+        </div>
+
+        <h2>Contact Support</h2>
+        <p>If your issue isn't covered above, please reach out and include:</p>
+        <ul>
+            <li>Your iPhone model and iOS version (Settings → General → About)</li>
+            <li>A description of what you expected to happen vs. what actually happened</li>
+            <li>Any error messages displayed on screen</li>
+        </ul>
+
+        <div class="contact-section">
+            <h2 style="margin-top:0;">Get in Touch</h2>
+            <p><strong>James Baker</strong><br>
+            Email: <a href="mailto:jbaker00@gmail.com">jbaker00@gmail.com</a><br>
+            GitHub: <a href="https://github.com/jbaker00" target="_blank">github.com/jbaker00</a><br>
+            Privacy Policy: <a href="https://jbaker00.github.io/myhealthrelay-privacy.html">jbaker00.github.io/myhealthrelay-privacy.html</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 James Baker. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
