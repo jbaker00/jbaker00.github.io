@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Vibes — Your travel documents, itineraries, and AI trip assistant in one place. The client app for Global Vibes Travel.">
+    <title>Global Vibes — Travel Documents &amp; AI Trip Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gv-hero {
+            background: linear-gradient(135deg, #1F3A5F 0%, #12233B 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .gv-hero .gv-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .gv-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        .gv-hero .tagline {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gv-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(212,175,55,0.6);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 32px;
+            color: #E9D8A6;
+        }
+        .btn-appstore {
+            display: inline-block;
+            background: #D4AF37;
+            color: #12233B;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: opacity 0.2s;
+        }
+        .btn-appstore:hover { opacity: 0.9; }
+
+        .gv-how {
+            background: #f7f3ea;
+            padding: 64px 24px;
+            text-align: center;
+        }
+        .gv-how h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 48px;
+        }
+        .gv-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .gv-step {
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+        }
+        .gv-step .step-num {
+            width: 48px;
+            height: 48px;
+            background: #1F3A5F;
+            color: #E9D8A6;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .gv-step h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 8px;
+        }
+        .gv-step p {
+            font-size: 0.9rem;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .gv-features {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+        .gv-features h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .gv-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .gv-feature {
+            background: white;
+            border: 1px solid #e5e5ea;
+            border-radius: 14px;
+            padding: 24px;
+        }
+        .gv-feature .emoji { font-size: 2rem; display: block; margin-bottom: 12px; }
+        .gv-feature h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1F3A5F;
+            margin-bottom: 8px;
+        }
+        .gv-feature p {
+            font-size: 0.95rem;
+            color: #3a3a3c;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .gv-cta {
+            background: linear-gradient(135deg, #1F3A5F 0%, #12233B 100%);
+            color: white;
+            text-align: center;
+            padding: 56px 24px;
+        }
+        .gv-cta h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; }
+        .gv-cta p { opacity: 0.85; margin-bottom: 24px; }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #6e6e73;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e5ea;
+        }
+        footer a { color: #1F3A5F; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="gv-hero">
+        <span class="gv-icon">🌴</span>
+        <h1>Global Vibes</h1>
+        <p class="tagline">All your travel documents, itineraries, and an AI trip assistant — curated for you by your Global Vibes Travel agent.</p>
+        <span class="gv-badge">✈️ FOR CLIENTS OF GLOBAL VIBES TRAVEL</span><br>
+        <a class="btn-appstore" href="https://www.globalvibestravel.com" target="_blank">Visit Global Vibes Travel</a>
+    </div>
+
+    <div class="gv-how">
+        <h2>How It Works</h2>
+        <div class="gv-steps">
+            <div class="gv-step">
+                <div class="step-num">1</div>
+                <h3>Your Agent Sets You Up</h3>
+                <p>Your travel agent creates your account and uploads your booking confirmations, itineraries, and travel documents.</p>
+            </div>
+            <div class="gv-step">
+                <div class="step-num">2</div>
+                <h3>Sign In Securely</h3>
+                <p>Log in with your email or Google account. Only you and your agent can see your documents.</p>
+            </div>
+            <div class="gv-step">
+                <div class="step-num">3</div>
+                <h3>Travel With Confidence</h3>
+                <p>Preview any document instantly, get an AI trip summary, and ask questions about your upcoming trip.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gv-features">
+        <h2>Features</h2>
+        <div class="gv-feature-grid">
+            <div class="gv-feature">
+                <span class="emoji">📄</span>
+                <h3>Documents in One Place</h3>
+                <p>Flights, hotels, transfers, insurance, and itineraries — organized with labels and viewable right in the app.</p>
+            </div>
+            <div class="gv-feature">
+                <span class="emoji">✨</span>
+                <h3>AI Trip Summary</h3>
+                <p>One tap generates a friendly overview of your trip built from the documents your agent uploaded.</p>
+            </div>
+            <div class="gv-feature">
+                <span class="emoji">💬</span>
+                <h3>Ask AI Anything</h3>
+                <p>Chat with an AI travel assistant about your destination — packing tips, weather, local customs, and more.</p>
+            </div>
+            <div class="gv-feature">
+                <span class="emoji">🏝️</span>
+                <h3>Browse Resorts</h3>
+                <p>Explore hand-picked resorts recommended by Global Vibes Travel for your next getaway.</p>
+            </div>
+            <div class="gv-feature">
+                <span class="emoji">🔒</span>
+                <h3>Private &amp; Secure</h3>
+                <p>Documents are stored securely in the cloud, encrypted in transit, and visible only to you and your agent.</p>
+            </div>
+            <div class="gv-feature">
+                <span class="emoji">🔔</span>
+                <h3>Always Up To Date</h3>
+                <p>When your agent adds or updates a document, it appears in your portal right away.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gv-cta">
+        <h2>Ready for your next adventure?</h2>
+        <p>Book with Global Vibes Travel and get the app as part of your journey.</p>
+        <a class="btn-appstore" href="mailto:info@globalvibestravel.com">Contact Your Agent</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Global Vibes Travel · James Baker. All rights reserved.<br>
+        <a href="https://jbaker00.github.io/global-vibes-support.html">Support</a> ·
+        <a href="https://jbaker00.github.io/global-vibes-privacy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
