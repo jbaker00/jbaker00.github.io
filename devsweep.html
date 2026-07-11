@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevSweep — the developer-focused disk cleaner for macOS. Reclaim the gigabytes hiding in DerivedData, simulator runtimes, DeviceSupport, and package caches. Free and open source.">
+    <title>DevSweep — Developer Disk Cleaner for macOS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero { background: linear-gradient(135deg, #0f2027 0%, #203a43 55%, #2c7744 100%); color: white; padding: 80px 20px 64px; text-align: center; }
+        .hero .icon { font-size: 4rem; }
+        .hero h1 { font-size: 2.6rem; font-weight: 700; margin: 10px 0 6px; }
+        .hero .tagline { font-size: 1.2rem; opacity: 0.95; max-width: 620px; margin: 0 auto 24px; }
+        .hero .cta { display: inline-block; background: white; color: #1e5631; font-weight: 600; padding: 12px 26px; border-radius: 30px; text-decoration: none; margin: 0 6px 10px; }
+        .hero .cta.ghost { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.7); }
+        .brew { display: inline-block; background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 10px 18px; font-family: "SF Mono", ui-monospace, Menlo, monospace; font-size: 0.95rem; margin-top: 18px; }
+        .wrap { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+        .feature { background: #f7f9fc; border: 1px solid #e6ecf3; border-radius: 14px; padding: 22px; }
+        .feature h3 { font-size: 1.05rem; color: #1e5631; margin: 0 0 6px; }
+        .feature p { margin: 0; color: #3a3a3c; line-height: 1.6; font-size: 0.97rem; }
+        .section-title { text-align: center; font-size: 1.6rem; font-weight: 700; margin: 8px 0 28px; color: #0f1b2d; }
+        .wedge { background: #edf7ee; border-left: 4px solid #2c7744; border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
+        .wedge p { margin: 0; font-size: 1.05rem; line-height: 1.7; }
+        .compat { text-align: center; color: #4a5a6c; margin-top: 36px; font-size: 0.98rem; }
+        footer { text-align: center; padding: 24px; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid #e5e5ea; }
+        a { color: #1e5631; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="https://github.com/jbaker00/DevSweep-macOS">GitHub</a>
+                <a href="https://github.com/jbaker00/DevSweep-macOS/issues">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="icon">🧹</div>
+        <h1>DevSweep</h1>
+        <p class="tagline">The developer-focused disk cleaner for macOS. Reclaim the 100GB hiding in DerivedData, simulator runtimes, and package caches.</p>
+        <a class="cta" href="https://github.com/jbaker00/DevSweep-macOS/releases/latest">Download DMG</a>
+        <a class="cta ghost" href="https://github.com/jbaker00/DevSweep-macOS">View Source</a>
+        <div><code class="brew">brew install --cask jbaker00/tap/devsweep</code></div>
+    </div>
+
+    <div class="wrap">
+        <div class="wedge">
+            <p><strong>General cleaners don't know what a simulator runtime is.</strong> DaisyDisk and CleanMyMac see a mysterious 100GB in ~/Library/Developer. DevSweep knows exactly what's in there — what's safe to delete because it regenerates, and what isn't because it re-downloads at 16GB a pop.</p>
+        </div>
+
+        <h2 class="section-title">What it sweeps</h2>
+        <div class="features">
+            <div class="feature"><h3>Xcode DerivedData</h3><p>Often tens of gigabytes, rebuilt automatically on your next build. Preselected — the classic safe win.</p></div>
+            <div class="feature"><h3>iOS DeviceSupport</h3><p>Debug symbols for every iOS version you've ever plugged in. Keeps the newest per device, flags the rest.</p></div>
+            <div class="feature"><h3>Simulator runtimes</h3><p>Old iOS/watchOS runtimes at ~16GB each. Never preselected — you decide, because re-downloading hurts.</p></div>
+            <div class="feature"><h3>Simulator caches</h3><p>User and system simulator caches plus unavailable simulators, cleared with Apple's own simctl.</p></div>
+            <div class="feature"><h3>Package caches</h3><p>npm, SwiftPM, pip, CocoaPods, Gradle, Playwright, and Homebrew caches — all re-downloaded on demand.</p></div>
+            <div class="feature"><h3>AI model caches</h3><p>Sees your Hugging Face and Ollama model folders, but never preselects them — big models are slow to re-pull.</p></div>
+        </div>
+
+        <div class="wedge" style="margin-top:44px;">
+            <p><strong>Safe by design.</strong> Scanning never touches your disk — it only measures. Risky items are never preselected, everything shows its real size before you commit, and a confirmation dialog stands between you and every deletion. The full source is on GitHub, so you can verify all of it.</p>
+        </div>
+
+        <p class="compat">macOS 14+ · signed &amp; notarized · free &amp; open source (MIT) · no account, no ads, no tracking</p>
+
+        <p style="text-align:center; margin-top:32px;">
+            <a href="https://github.com/jbaker00/DevSweep-macOS/releases/latest">Download</a> &nbsp;·&nbsp; <a href="https://github.com/jbaker00/DevSweep-macOS">Source on GitHub</a> &nbsp;·&nbsp; <a href="https://github.com/jbaker00/DevSweep-macOS/issues">Report an issue</a>
+        </p>
+    </div>
+
+    <footer>© 2026 James Baker · DevSweep</footer>
+</body>
+</html>
