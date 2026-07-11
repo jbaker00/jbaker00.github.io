@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NFS Files — Support">
+    <title>NFS Files — Support</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-hero { background: linear-gradient(135deg, #3949c9 0%, #0aacb5 100%); color: white; padding: 60px 20px 40px; text-align: center; }
+        .privacy-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+        .privacy-hero p { font-size: 1.05rem; opacity: 0.92; }
+        .privacy-content { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+        .privacy-content h2 { font-size: 1.25rem; font-weight: 700; color: #1f57b6; margin-top: 36px; margin-bottom: 10px; }
+        .privacy-content p, .privacy-content li { font-size: 1rem; line-height: 1.75; color: #1c1c1e; }
+        .privacy-content ul { padding-left: 20px; margin: 8px 0; }
+        .privacy-content li { margin-bottom: 6px; }
+        .highlight-box { background: #eaf4fb; border-left: 4px solid #0aacb5; border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; }
+        .highlight-box p { margin: 0; font-weight: 500; }
+        code, pre { font-family: "SF Mono", Menlo, monospace; font-size: 0.9rem; }
+        pre { background: #0f1b2d; color: #d6e6f2; padding: 14px 16px; border-radius: 8px; overflow-x: auto; }
+        code { background: #eef2f6; color: #b3306b; padding: 1px 5px; border-radius: 4px; }
+        pre code { background: none; color: inherit; padding: 0; }
+        .faq-item { border-bottom: 1px solid #e5e5ea; padding: 20px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item h3 { font-size: 1rem; font-weight: 600; color: #1c1c1e; margin-bottom: 8px; }
+        .faq-item p { margin: 0 0 8px; color: #3a3a3c; }
+        footer { text-align: center; padding: 24px; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid #e5e5ea; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/nfs-files.html">NFS Files</a>
+                <a href="/nfs-files-privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="privacy-hero">
+        <h1>NFS Files Support</h1>
+        <p>The fast, focused NFS client for iPhone &amp; iPad</p>
+    </div>
+
+    <div class="privacy-content">
+        <div class="highlight-box">
+            <p>Most connection problems come down to one server setting. If a connection is refused, the app tells you exactly what to fix — and the top fixes are below.</p>
+        </div>
+
+        <h2>Connecting to your NAS</h2>
+
+        <div class="faq-item">
+            <h3>"Connection refused" or the app can't mount the share</h3>
+            <p>This is the #1 issue, and it's almost always the export's <em>privileged-port</em> requirement. iPhone and iPad apps connect from standard (non-privileged) ports, which many Linux/NAS servers reject by default. The fix depends on your server:</p>
+            <ul>
+                <li><strong>Synology:</strong> Control Panel → Shared Folder → Edit → NFS Permissions → enable <strong>"Allow connections from non-privileged ports"</strong>.</li>
+                <li><strong>Linux / Raspberry Pi / TrueNAS SCALE:</strong> add the <code>insecure</code> option to the export in <code>/etc/exports</code>, then run <code>sudo exportfs -ra</code>.</li>
+                <li><strong>QNAP:</strong> enable NFS on the shared folder and allow the access from your device's subnet.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>"Access denied" once connected, or you can't open a folder</h3>
+            <p>NFS has no passwords — the server checks the numeric <strong>User ID (UID)</strong> your device presents. Set the UID/GID in the app's Advanced settings to match a user on your server (the first Linux user is usually <code>1000</code>/<code>1000</code>; on Synology it's often <code>1026</code>+). Run <code>id yourusername</code> on the server to find it.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Recommended server setup (safest and simplest)</h3>
+            <p>Export your share so every device maps to one designated user, restricted to your own network:</p>
+            <pre><code>/srv/share  192.168.1.0/24(rw,sync,insecure,no_subtree_check,all_squash,anonuid=1000,anongid=1000)</code></pre>
+            <ul>
+                <li><code>insecure</code> — required for iPhone/iPad apps</li>
+                <li>your subnet instead of <code>*</code> — only devices on your network can connect</li>
+                <li><code>all_squash</code> + <code>anonuid</code> — every client acts as one low-privilege user, so your personal account stays private and access is easy to revoke</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>The server isn't found automatically</h3>
+            <p>Bonjour discovery only works when your NAS advertises NFS on the same network segment. If it doesn't appear, just type the server's IP address (e.g. <code>192.168.1.20</code>) and tap <strong>Find Shared Folders</strong> to list its exports.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>My server uses Kerberos, or it's NFSv4-only</h3>
+            <p>NFS Files speaks <strong>NFSv3</strong> — the version every NAS supports out of the box — using standard network-address access (no Kerberos). If your server is configured NFSv4-only or requires <code>sec=krb5</code>, enable NFSv3 for the share, or use a share that allows AUTH_SYS access.</p>
+        </div>
+
+        <h2>Files &amp; transfers</h2>
+
+        <div class="faq-item">
+            <h3>Can I stream video, or does it download first?</h3>
+            <p>Files download before they open in the preview. Large videos are cached on your device so reopening them is instant — you can clear that cache anytime in Settings → Downloaded Files.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I remove ads?</h3>
+            <p>Open Settings → NFS Files Pro → <strong>Remove Ads</strong>. It's a one-time purchase — no subscription — and it removes all ads forever. Already purchased? Tap <strong>Restore Purchase</strong>.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Are my files private?</h3>
+            <p>Yes. NFS Files talks directly to your server over your local network — your files never pass through us or any cloud. See the <a href="/nfs-files-privacy.html">Privacy Policy</a> for details.</p>
+        </div>
+
+        <h2>Still stuck?</h2>
+        <p>Send details of your server (make/model, OS) and what you're seeing, and we'll help. Include the exact error message the app showed — it usually points at the fix.</p>
+    </div>
+
+    <footer>
+        © 2026 James Baker · <a href="/nfs-files.html">NFS Files</a> · <a href="/nfs-files-privacy.html">Privacy</a>
+    </footer>
+</body>
+</html>
