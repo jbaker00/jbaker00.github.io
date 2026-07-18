@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SFTP Files — Support">
+    <title>SFTP Files — Support</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-hero { background: linear-gradient(135deg, #1d3a8f 0%, #2f6fd0 100%); color: white; padding: 60px 20px 40px; text-align: center; }
+        .privacy-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+        .privacy-hero p { font-size: 1.05rem; opacity: 0.92; }
+        .privacy-content { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+        .privacy-content h2 { font-size: 1.25rem; font-weight: 700; color: #1f57b6; margin-top: 36px; margin-bottom: 10px; }
+        .privacy-content p, .privacy-content li { font-size: 1rem; line-height: 1.75; color: #1c1c1e; }
+        .privacy-content ul { padding-left: 20px; margin: 8px 0; }
+        .privacy-content li { margin-bottom: 6px; }
+        .highlight-box { background: #eaf1fb; border-left: 4px solid #2f6fd0; border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; }
+        .highlight-box p { margin: 0; font-weight: 500; }
+        code, pre { font-family: "SF Mono", Menlo, monospace; font-size: 0.9rem; }
+        pre { background: #0f1b2d; color: #d6e6f2; padding: 14px 16px; border-radius: 8px; overflow-x: auto; }
+        code { background: #eef2f6; color: #b3306b; padding: 1px 5px; border-radius: 4px; }
+        pre code { background: none; color: inherit; padding: 0; }
+        .faq-item { border-bottom: 1px solid #e5e5ea; padding: 20px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item h3 { font-size: 1rem; font-weight: 600; color: #1c1c1e; margin-bottom: 8px; }
+        .faq-item p { margin: 0 0 8px; color: #3a3a3c; }
+        footer { text-align: center; padding: 24px; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid #e5e5ea; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/sftp-files.html">SFTP Files</a>
+                <a href="/sftp-files-privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="privacy-hero">
+        <h1>SFTP Files Support</h1>
+        <p>The fast, focused SFTP client for iPhone, iPad &amp; Mac</p>
+    </div>
+
+    <div class="privacy-content">
+        <div class="highlight-box">
+            <p>SFTP Files works with any server that runs SSH — a Raspberry Pi, a NAS, a VPS, or a web host. If you can <code>ssh</code> to it, you can connect. The most common fixes are below.</p>
+        </div>
+
+        <h2>Connecting</h2>
+
+        <div class="faq-item">
+            <h3>"Connection refused" or the connection times out</h3>
+            <p>The app connects over SSH (port 22 unless you changed it). Check that:</p>
+            <ul>
+                <li>SSH is enabled on the server — on a Raspberry Pi run <code>sudo systemctl enable --now ssh</code>; on a Synology enable SSH in Control Panel → Terminal &amp; SNMP; on a Mac turn on Remote Login.</li>
+                <li>The port matches your server's SSH port (22 by default).</li>
+                <li>You're on a network that can reach the server — for a home server that usually means the same Wi-Fi.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>Sign-in fails with a password</h3>
+            <p>Use the same username and password you'd use with <code>ssh user@host</code>. If plain <code>ssh</code> works but the app doesn't, check that the server allows password authentication (<code>PasswordAuthentication yes</code> in <code>/etc/ssh/sshd_config</code>) — many VPS images disable it in favor of keys.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Using a private key</h3>
+            <p>Choose <strong>Private Key</strong> authentication and paste your OpenSSH-format key — the text starting with <code>-----BEGIN OPENSSH PRIVATE KEY-----</code>. Ed25519 and RSA keys are supported, including passphrase-protected ones (enter the passphrase in the field below the key).</p>
+            <p>Note: keys encrypted with a hardened KDF setting (<code>ssh-keygen -a 32</code> or higher) aren't supported yet — re-export with the default settings, or remove the passphrase copy with <code>ssh-keygen -p</code>.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Start directory</h3>
+            <p>Leave it blank to start in your home folder, or set an absolute path like <code>/var/www</code> to open there on every connect.</p>
+        </div>
+
+        <h2>Mac: mount as a drive in Finder</h2>
+
+        <div class="faq-item">
+            <h3>How do I get my server into Finder?</h3>
+            <p>Edit the server and turn on <strong>Mount as drive in Finder</strong>. It appears under Locations in Finder's sidebar, and every app on your Mac can open and save files on it. To remove it, press the <strong>⏏ eject</strong> button on the server card (Finder doesn't show its own eject control for app-provided drives — that's a macOS limitation).</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Changes made on the server don't appear immediately</h3>
+            <p>SFTP has no change notifications, so Finder refreshes a folder when you reopen it. If a folder looks stale, close and reopen it, or press ⌘R.</p>
+        </div>
+
+        <h2>Console</h2>
+
+        <div class="faq-item">
+            <h3>What is the console?</h3>
+            <p>A quick way to run one-off commands (<code>ls -la</code>, <code>df -h</code>, <code>tail -f</code>-style checks) on your server over the same SSH connection. <code>cd</code> is sticky between commands. Some hardened servers (SFTP-only hosting accounts) disable command execution — file browsing still works there, but the console will report that commands are unavailable.</p>
+        </div>
+
+        <h2>Files &amp; transfers</h2>
+
+        <div class="faq-item">
+            <h3>Is my data encrypted?</h3>
+            <p>Yes — everything (credentials, files, console commands) travels inside the SSH connection, encrypted end to end between your device and your server. See the <a href="/sftp-files-privacy.html">Privacy Policy</a>.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I remove ads?</h3>
+            <p>Open Settings → SFTP Files Pro → <strong>Remove Ads</strong>. One-time purchase, no subscription, removes all ads forever, on all your devices via universal purchase. Already bought it? Tap <strong>Restore Purchase</strong>.</p>
+        </div>
+
+        <h2>Still stuck?</h2>
+        <p>Send details of your server (make/model or hosting provider, OS) and the exact error message the app showed — it usually points straight at the fix. The in-app <strong>Protocol</strong> view shows the full SFTP conversation and is great to include.</p>
+    </div>
+
+    <footer>
+        © 2026 James Baker · <a href="/sftp-files.html">SFTP Files</a> · <a href="/sftp-files-privacy.html">Privacy</a>
+    </footer>
+</body>
+</html>
