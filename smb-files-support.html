@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SMB Files — Support">
+    <title>SMB Files — Support</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-hero { background: linear-gradient(135deg, #4d147f 0%, #e0389e 100%); color: white; padding: 60px 20px 40px; text-align: center; }
+        .privacy-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+        .privacy-hero p { font-size: 1.05rem; opacity: 0.92; }
+        .privacy-content { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+        .privacy-content h2 { font-size: 1.25rem; font-weight: 700; color: #7b2d9e; margin-top: 36px; margin-bottom: 10px; }
+        .privacy-content p, .privacy-content li { font-size: 1rem; line-height: 1.75; color: #1c1c1e; }
+        .privacy-content ul { padding-left: 20px; margin: 8px 0; }
+        .privacy-content li { margin-bottom: 6px; }
+        .highlight-box { background: #f6ecfa; border-left: 4px solid #a03fc0; border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; }
+        .highlight-box p { margin: 0; font-weight: 500; }
+        code, pre { font-family: "SF Mono", Menlo, monospace; font-size: 0.9rem; }
+        pre { background: #1b0f2d; color: #e8d6f2; padding: 14px 16px; border-radius: 8px; overflow-x: auto; }
+        code { background: #f2eef6; color: #a3306b; padding: 1px 5px; border-radius: 4px; }
+        pre code { background: none; color: inherit; padding: 0; }
+        .faq-item { border-bottom: 1px solid #e5e5ea; padding: 20px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item h3 { font-size: 1rem; font-weight: 600; color: #1c1c1e; margin-bottom: 8px; }
+        .faq-item p { margin: 0 0 8px; color: #3a3a3c; }
+        a { color: #7b2d9e; }
+        footer { text-align: center; padding: 24px; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid #e5e5ea; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/smb-files.html">SMB Files</a>
+                <a href="/smb-files-privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="privacy-hero">
+        <h1>SMB Files Support</h1>
+        <p>Reach your network shares from iPhone, iPad &amp; Mac</p>
+    </div>
+
+    <div class="privacy-content">
+        <div class="highlight-box">
+            <p>SMB Files talks to anything that shares files over SMB — a Synology or QNAP NAS, a Windows PC, a Mac with File Sharing on, or a Samba server on a Raspberry Pi. The most common fixes are below.</p>
+        </div>
+
+        <h2>Connecting</h2>
+
+        <div class="faq-item">
+            <h3>What do I put in the Host field?</h3>
+            <p>The server's IP address (for example <code>192.168.1.50</code>) or its network name (for example <code>nas.local</code>). Leave the port at <strong>445</strong> unless your server is set up on a different one.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>It says it can't connect</h3>
+            <p>Work through these in order:</p>
+            <ul>
+                <li>Make sure your iPhone or iPad is on the <strong>same network</strong> as the server — SMB is a local-network protocol and will not reach a server across the internet unless you are on a VPN.</li>
+                <li>Check that file sharing is switched on at the server: <strong>Windows</strong> → File and Printer Sharing; <strong>Mac</strong> → System Settings → General → Sharing → File Sharing; <strong>NAS</strong> → the SMB service in its control panel.</li>
+                <li>Confirm the username and password by connecting from a computer first.</li>
+                <li>iOS asks once for permission to find devices on your local network. If you declined, turn it back on in <strong>Settings → SMB Files → Local Network</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>I connect, but no shares are listed</h3>
+            <p>That usually means the account signed in successfully but has no shares assigned to it. Check on the server that your user has access to at least one shared folder. Administrative shares hidden with a <code>$</code> are not listed.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Which SMB versions are supported?</h3>
+            <p>SMB 2 and SMB 3. Very old servers limited to SMB 1 are not supported — SMB 1 has been deprecated for years and is switched off by default on modern systems for good security reasons.</p>
+        </div>
+
+        <h2>Files &amp; transfers</h2>
+
+        <div class="faq-item">
+            <h3>How do I download a file?</h3>
+            <p>Tap and hold a file, then choose <strong>Download</strong>. Folders open with a single tap, and the back arrow walks you up the tree.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What does the info button show?</h3>
+            <p>Connection diagnostics for the session you are in — the server and share you are connected to, the account in use, and a running log of the operations the app has performed. It is the first place to look when something is not behaving.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is my data encrypted?</h3>
+            <p>Traffic between your device and your server uses SMB's own protections, and your credentials are stored in the device Keychain. Because SMB is a local-network protocol, your files never travel over the public internet or through any server of ours. See the <a href="/smb-files-privacy.html">Privacy Policy</a>.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I remove ads?</h3>
+            <p>Open Settings → <strong>SMB Files Pro</strong>. One-time purchase, no subscription, removes all ads forever, on all your devices via universal purchase. Already bought it? Tap <strong>Restore Purchases</strong>.</p>
+        </div>
+
+        <h2>Still stuck?</h2>
+        <p>Send details of your server (make and model, or the operating system it runs) and the exact error message the app showed — it usually points straight at the fix. The in-app connection info view logs the operations that ran and is helpful to include.</p>
+    </div>
+
+    <footer>
+        © 2026 James Baker · <a href="/smb-files.html">SMB Files</a> · <a href="/smb-files-privacy.html">Privacy</a>
+    </footer>
+</body>
+</html>
