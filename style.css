@@ -207,6 +207,21 @@ body {
     margin-top: 0.75rem;
 }
 
+.app-card .btn {
+    justify-content: center;
+}
+
+.app-card .btn-secondary {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    backdrop-filter: none;
+    border: 1px solid #E0E0E5;
+}
+
+.app-card .btn-secondary:hover {
+    background: #E8E8ED;
+}
+
 /* About Section */
 .about-section {
     padding: 80px 20px;
