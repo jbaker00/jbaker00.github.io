@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Device Inspector — a real-time view of your iPhone or iPad's IDFA, ATT status, and hidden device configuration. Free, open source, no data collected.">
+    <title>Device Inspector — IDFA &amp; Device Stats</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero { background: linear-gradient(135deg, #334155 0%, #0f172a 100%); color: white; padding: 80px 20px 64px; text-align: center; }
+        .hero .icon { font-size: 4rem; }
+        .hero h1 { font-size: 2.6rem; font-weight: 700; margin: 10px 0 6px; }
+        .hero .tagline { font-size: 1.2rem; opacity: 0.95; max-width: 620px; margin: 0 auto 24px; }
+        .hero .cta { display: inline-block; background: white; color: #334155; font-weight: 600; padding: 12px 26px; border-radius: 30px; text-decoration: none; }
+        .wrap { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+        .feature { background: #f7f9fc; border: 1px solid #e6ecf3; border-radius: 14px; padding: 22px; }
+        .feature h3 { font-size: 1.05rem; color: #334155; margin: 0 0 6px; }
+        .feature p { margin: 0; color: #3a3a3c; line-height: 1.6; font-size: 0.97rem; }
+        .section-title { text-align: center; font-size: 1.6rem; font-weight: 700; margin: 8px 0 28px; color: #0f1b2d; }
+        .wedge { background: #eef1f5; border-left: 4px solid #334155; border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
+        .wedge p { margin: 0; font-size: 1.05rem; line-height: 1.7; }
+        .compat { text-align: center; color: #4a5a6c; margin-top: 36px; font-size: 0.98rem; }
+        footer { text-align: center; padding: 24px; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid #e5e5ea; }
+        a { color: #334155; }
+        code { font-family: "SF Mono", Menlo, monospace; font-size: 0.92em; background: #eef2f6; color: #b3306b; padding: 1px 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="icon">🔍</div>
+        <h1>Device Inspector</h1>
+        <p class="tagline">A complete, real-time view of your iPhone or iPad's hidden configuration — the same data ad networks and analytics SDKs read every time you open an app.</p>
+        <a class="cta" href="https://apps.apple.com/us/app/idfa-device-stats/id6783450098" target="_blank">Download on the App Store</a>
+    </div>
+
+    <div class="wrap">
+        <div class="wedge">
+            <p><strong>Built for debugging attribution.</strong> If you work in mobile advertising, analytics, or app development, Device Inspector shows you precisely what iOS exposes — no guessing.</p>
+        </div>
+
+        <h2 class="section-title">What it shows</h2>
+        <div class="features">
+            <div class="feature"><h3>IDFA & ATT status</h3><p>Your advertising identifier plus its current App Tracking Transparency status — Authorized, Denied, Restricted, or Not Determined.</p></div>
+            <div class="feature"><h3>Device details</h3><p>Model, OS version, build number, kernel info, screen metrics, and processor/memory stats.</p></div>
+            <div class="feature"><h3>Network & carrier</h3><p>Wi-Fi, cellular, and VPN interface details, plus carrier name, MCC/MNC, and radio access technology.</p></div>
+            <div class="feature"><h3>Locale & permissions</h3><p>Locale, region, languages, timezone, push notification status, battery, and thermal state.</p></div>
+            <div class="feature"><h3>Copy any value</h3><p>Tap any row to copy it to the clipboard, or use the search bar to filter across every field instantly.</p></div>
+            <div class="feature"><h3>Private by design</h3><p>Everything stays on your device. No data is collected and no network requests are made beyond loading ads via AdMob.</p></div>
+        </div>
+
+        <p class="compat">IDFA reads as all-zeros until App Tracking Transparency is granted — and always on the Simulator, use a real device.<br>Free · iPhone &amp; iPad.</p>
+    </div>
+
+    <footer>© 2026 James Baker · Device Inspector</footer>
+</body>
+</html>
