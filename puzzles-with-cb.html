@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PuzzlesWithCB — Free iOS jigsaw puzzle game built from photographs of real jigsaws assembled by hand.">
+    <title>Puzzles with CB — iOS Jigsaw Puzzles</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero */
+        .pwcb-hero {
+            background: linear-gradient(135deg, #4A3B8C 0%, #2A2154 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .pwcb-hero .pwcb-icon {
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: 24px;
+            display: block;
+        }
+        .pwcb-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        .pwcb-hero .tagline {
+            font-size: 1.25rem;
+            opacity: 0.85;
+            margin-bottom: 32px;
+        }
+        .pwcb-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 32px;
+        }
+        .btn-appstore {
+            display: inline-block;
+            background: #C8A200;
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-appstore:hover { background: #a88900; }
+
+        /* Story */
+        .pwcb-story {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 64px 24px 8px;
+            text-align: center;
+        }
+        .pwcb-story h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4A3B8C;
+            margin-bottom: 20px;
+        }
+        .pwcb-story p {
+            font-size: 1.05rem;
+            color: #3a3a3c;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Features */
+        .pwcb-features {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+        .pwcb-features h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4A3B8C;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .pwcb-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+        .pwcb-feature {
+            text-align: center;
+        }
+        .pwcb-feature .icon {
+            font-size: 2.5rem;
+            margin-bottom: 14px;
+        }
+        .pwcb-feature h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1c1c1e;
+            margin-bottom: 8px;
+        }
+        .pwcb-feature p {
+            font-size: 0.95rem;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Difficulty strip */
+        .pwcb-howto {
+            background: #f2f2f7;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .pwcb-howto h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2A2154;
+            margin-bottom: 24px;
+        }
+        .pwcb-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .pwcb-step {
+            background: white;
+            border: 1px solid #e5e5ea;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            color: #1c1c1e;
+            font-weight: 500;
+        }
+
+        /* Footer links */
+        .pwcb-footer-links {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid #e5e5ea;
+            font-size: 0.9rem;
+            color: #6e6e73;
+        }
+        .pwcb-footer-links a {
+            color: #4A3B8C;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        .pwcb-footer-links a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center;
+            padding: 20px 24px;
+            color: #6e6e73;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e5ea;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pwcb-hero">
+        <span class="pwcb-icon">🧩</span>
+        <div class="pwcb-badge">Free on the App Store</div>
+        <h1>Puzzles with CB</h1>
+        <p class="tagline">Real jigsaws, solved again on your phone</p>
+        <br>
+        <a href="https://apps.apple.com/us/app/puzzleswithcb/id6794502552" class="btn-appstore">Download on the App Store</a>
+    </div>
+
+    <div class="pwcb-story">
+        <h2>Every puzzle here is a real jigsaw</h2>
+        <p>Each one was assembled by hand on a kitchen table, photographed once it was finished, and straightened out so only the artwork remains. The pictures you are piecing together are the same ones somebody already spent an evening putting together for real.</p>
+    </div>
+
+    <div class="pwcb-features">
+        <h2>How it plays</h2>
+        <div class="pwcb-grid">
+            <div class="pwcb-feature">
+                <div class="icon">🧩</div>
+                <h3>Proper Jigsaw Pieces</h3>
+                <p>Interlocking tabs and sockets, cut fresh from the artwork each time you play. Drag a piece near where it belongs and it snaps into place with a satisfying little tap.</p>
+            </div>
+            <div class="pwcb-feature">
+                <div class="icon">🔢</div>
+                <h3>12 to 300 Pieces</h3>
+                <p>The suggested count keeps pieces a comfortable size for your device, so nothing is ever too fiddly to grab.</p>
+            </div>
+            <div class="pwcb-feature">
+                <div class="icon">🔍</div>
+                <h3>Peek at the Picture</h3>
+                <p>Forgot what you are aiming for? Tap the small picture at the top for a closer look, then carry straight on.</p>
+            </div>
+            <div class="pwcb-feature">
+                <div class="icon">✨</div>
+                <h3>Finish It</h3>
+                <p>Stuck, or just curious how it ends? Watch the pieces walk themselves home one at a time. Speed it up, or hit Stop and take over — everything already placed stays put.</p>
+            </div>
+            <div class="pwcb-feature">
+                <div class="icon">💾</div>
+                <h3>Save Your Finish</h3>
+                <p>Finished a puzzle? Save a picture of it to share.</p>
+            </div>
+            <div class="pwcb-feature">
+                <div class="icon">🌙</div>
+                <h3>No Pressure</h3>
+                <p>No account, no sign-up, no timer, and nothing to lose if you put it down halfway. Just a quiet puzzle whenever you want one.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pwcb-howto">
+        <h2>Three Ways to Play</h2>
+        <div class="pwcb-steps">
+            <span class="pwcb-step">Easy — the finished picture shows faintly on the board to guide you</span>
+            <span class="pwcb-step">Medium — the same guide, but every piece starts turned</span>
+            <span class="pwcb-step">Advanced — a blank board and turned pieces, no help at all</span>
+        </div>
+    </div>
+
+    <div class="pwcb-footer-links">
+        <a href="https://apps.apple.com/us/app/puzzleswithcb/id6794502552">App Store</a>
+        <a href="puzzles-with-cb-privacy.html">Privacy Policy</a>
+        <a href="puzzles-with-cb-support.html">Support</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 James Baker. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
