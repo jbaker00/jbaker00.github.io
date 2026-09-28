@@ -30,7 +30,7 @@
 </head>
 <body>
     <div style="background:#0f1b2d;color:#fff;text-align:center;padding:10px 16px;font-size:0.92rem;">
-        NFS Files support has a new home — visit <a href="https://allgemselect.com/support/" style="color:#7fd9e0;">allgemselect.com/support</a> for the latest guides.
+        NFS Files support has a new home — visit <a href="https://jbaker00.github.io/nfsfiles-site/support/" style="color:#7fd9e0;">the NFS Files support site</a> for the latest guides.
     </div>
     <nav class="navbar">
         <div class="container">
@@ -87,8 +87,8 @@
         </div>
 
         <div class="faq-item">
-            <h3>My server uses Kerberos, or it's NFSv4-only</h3>
-            <p>NFS Files speaks <strong>NFSv3</strong> — the version every NAS supports out of the box — using standard network-address access (no Kerberos). If your server is configured NFSv4-only or requires <code>sec=krb5</code>, enable NFSv3 for the share, or use a share that allows AUTH_SYS access.</p>
+            <h3>My server uses Kerberos</h3>
+            <p>NFS Files speaks <strong>NFSv3 and NFSv4.0</strong> (it detects which one your server offers) using standard network-address access (AUTH_SYS, no Kerberos). If your share requires <code>sec=krb5</code>, allow <code>sec=sys</code> on it as well, or use a share that already does.</p>
         </div>
 
         <h2>Files &amp; transfers</h2>
