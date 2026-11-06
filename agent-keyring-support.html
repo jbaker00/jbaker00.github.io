@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agent Keyring — Support">
+    <title>Agent Keyring — Support</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-hero { background: linear-gradient(135deg, #062a33 0%, #0b4f5c 100%); color: white; padding: 60px 20px 40px; text-align: center; }
+        .privacy-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+        .privacy-content { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+        .privacy-content h2 { font-size: 1.25rem; font-weight: 700; color: #084c61; margin-top: 36px; margin-bottom: 10px; }
+        .privacy-content p, .privacy-content li { font-size: 1rem; line-height: 1.75; color: #1c1c1e; }
+        footer { text-align: center; padding: 24px; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid #e5e5ea; }
+    </style>
+</head>
+<body>
+    <nav class="navbar"><div class="container">
+        <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+        <div class="nav-links"><a href="/">Apps</a><a href="agent-keyring.html">Agent Keyring</a><a href="agent-keyring-privacy.html">Privacy</a></div>
+    </div></nav>
+    <div class="privacy-hero"><h1>Agent Keyring — Support</h1><p>Free &amp; open source (MIT)</p></div>
+    <div class="privacy-content">
+        <h2>Getting help</h2>
+        <p>File an issue on GitHub: <a href="https://github.com/jbaker00/agent-keyring/issues">github.com/jbaker00/agent-keyring/issues</a>. Please include your macOS version and the output of <code>agent-keyring doctor</code> (it prints no secrets).</p>
+        <h2>Common problems</h2>
+        <ul>
+            <li><strong>"gcloud not found" in the app:</strong> install Google Cloud SDK, or set the path explicitly in Settings (gear icon). GUI apps do not inherit your Terminal PATH; the app searches common SDK locations and your login shell.</li>
+            <li><strong>Local list is empty:</strong> local secrets live under keychain service <code>agent-keyring</code>. If you deleted demo keys in Terminal, an empty list is correct — click Add to create one.</li>
+            <li><strong>Shared commands fail:</strong> run <code>gcloud auth application-default login</code>, confirm <code>gcloud config get-value project</code>, and enable <code>secretmanager.googleapis.com</code> on your own project.</li>
+            <li><strong>AWS/Azure/OCI errors:</strong> each backend uses that cloud's CLI and login (<code>aws configure</code> / <code>az login</code> / <code>oci setup config</code>) plus its vault config — see the error text and <code>agent-keyring doctor</code>.</li>
+        </ul>
+        <h2>Security questions</h2>
+        <p>See the open security review in the repository (<code>docs/SECURITY-REVIEW.md</code>). The headline: Agent Keyring removes plaintext secrets from files and prompts; it does not protect against malicious code already running as your user.</p>
+    </div>
+    <footer>© 2026 James Baker · Agent Keyring</footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agent Keyring — paste-once secrets for humans and AI agents. Local OS keychain for this Mac, your own Google Cloud Secret Manager for keys that follow you. Free and open source.">
+    <title>Agent Keyring — Secrets for Humans &amp; AI Agents</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero { background: linear-gradient(135deg, #062a33 0%, #0b4f5c 55%, #0e7c86 100%); color: white; padding: 80px 20px 64px; text-align: center; }
+        .hero .icon { font-size: 4rem; }
+        .hero h1 { font-size: 2.6rem; font-weight: 700; margin: 10px 0 6px; }
+        .hero .tagline { font-size: 1.2rem; opacity: 0.95; max-width: 640px; margin: 0 auto 24px; }
+        .hero .cta { display: inline-block; background: white; color: #084c61; font-weight: 600; padding: 12px 26px; border-radius: 30px; text-decoration: none; margin: 0 6px 10px; }
+        .hero .cta.ghost { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.7); }
+        .wrap { max-width: 860px; margin: 0 auto; padding: 56px 24px 80px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+        .feature { background: #f7f9fc; border: 1px solid #e6ecf3; border-radius: 14px; padding: 22px; }
+        .feature h3 { font-size: 1.05rem; color: #084c61; margin: 0 0 6px; }
+        .feature p { margin: 0; color: #3a3a3c; line-height: 1.6; font-size: 0.97rem; }
+        .section-title { text-align: center; font-size: 1.6rem; font-weight: 700; margin: 8px 0 28px; color: #0f1b2d; }
+        .wedge { background: #e8f6f7; border-left: 4px solid #0e7c86; border-radius: 0 10px 10px 0; padding: 20px 24px; margin: 40px 0; }
+        .wedge p { margin: 0; font-size: 1.05rem; line-height: 1.7; }
+        .compat { text-align: center; color: #4a5a6c; margin-top: 36px; font-size: 0.98rem; }
+        footer { text-align: center; padding: 24px; color: #6e6e73; font-size: 0.85rem; border-top: 1px solid #e5e5ea; }
+        a { color: #084c61; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="/" style="color:inherit;text-decoration:none;">James Baker</a></div>
+            <div class="nav-links">
+                <a href="/">Apps</a>
+                <a href="https://github.com/jbaker00/agent-keyring">GitHub</a>
+                <a href="agent-keyring-support.html">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="icon">🔑</div>
+        <h1>Agent Keyring</h1>
+        <p class="tagline">Paste a secret once. Your AI agents fetch it by name — never from a plaintext .env file again.</p>
+        <a class="cta" href="https://github.com/jbaker00/agent-keyring">View Source</a>
+        <a class="cta ghost" href="agent-keyring-support.html">Support</a>
+    </div>
+
+    <div class="wrap">
+        <div class="wedge"><p><strong>Your accounts, your stores.</strong> Local secrets live in this Mac's Keychain. Shared secrets live in <em>your own</em> Google Cloud project (Secret Manager), under your own login. AWS Secrets Manager, Azure Key Vault, and OCI Vault backends plug into the same contract. There is no Agent Keyring server — nothing of yours ever touches ours.</p></div>
+
+        <h2 class="section-title">What it does</h2>
+        <div class="features">
+            <div class="feature"><h3>For agents</h3><p>One call — <code>AgentKeyring().get("openai-api-key")</code> or <code>agent-keyring get</code> — returns the secret in memory. No files to scrape, nothing printed to logs by design.</p></div>
+            <div class="feature"><h3>For humans</h3><p>A native macOS app and CLI to add, edit, and delete secrets. Reveal is behind Touch ID, the clipboard clears itself, and lists never fetch values.</p></div>
+            <div class="feature"><h3>Local + shared</h3><p>Machine-only keys stay in the OS keychain. Keys an agent needs everywhere sync through your own cloud project with per-secret IAM.</p></div>
+            <div class="feature"><h3>Swappable stores</h3><p>Google today; AWS Secrets Manager, Azure Key Vault, and OCI Vault implemented behind the same interface. 1Password, LastPass, and Chrome are on the roadmap.</p></div>
+            <div class="feature"><h3>Own-account check</h3><p><code>agent-keyring doctor</code> verifies your keychain, your gcloud login, and your IAM — printing no secrets — before you trust it with real keys.</p></div>
+            <div class="feature"><h3>Open &amp; auditable</h3><p>MIT-licensed, security-reviewed in the open, and honest about its limits: it cannot protect against malicious code already running as you.</p></div>
+        </div>
+
+        <p class="compat">macOS 14+ · SwiftUI + Python · free &amp; open source (MIT) · no account, no ads, no tracking</p>
+        <p style="text-align:center;"><a href="https://github.com/jbaker00/agent-keyring">Source on GitHub</a> · <a href="agent-keyring-privacy.html">Privacy</a> · <a href="agent-keyring-support.html">Support</a></p>
+    </div>
+
+    <footer>© 2026 James Baker · Agent Keyring</footer>
+</body>
+</html>
